@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "teammateMode": "auto",
+  "remoteControlAtStartup": true,
+  "isolatePeerMachines": true,
+  "permissions": {
+    "allow": [
+      "Read",
+      "WebSearch",
+      "WebFetch",
+      "Write(context/**)",
+      "Edit(context/**)",
+      "Write(CLAUDE.md)",
+      "Edit(CLAUDE.md)",
+      "Write(MEMORY.md)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Research_Analyzer repo: this workspace adversarially stress-tests research papers. Before analyzing, read CLAUDE.md and the context/ files - context/paper-understanding.md is the neutral reconstruction, context/stress-test.md is the critique and novelty assessment, context/source-map.md is the citation audit. Keep the faithful reading SEPARATE from the critique; every stress-test finding must cite a specific equation or section of the paper.\"",
+            "statusMessage": "Loading Research_Analyzer context"
+          }
+        ]
+      }
+    ]
+  }
+}

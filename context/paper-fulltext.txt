@@ -1,0 +1,700 @@
+Thermodynamic Waste, Health Capital, and
+Long-Run Growth
+A Thermo-Ecological Augmentation of the Solow Model
+Stuart Greenlee, M.A. (Economics)
+Independent Researcher
+stuart.greenlee@gmail.com
+May 2026
+Abstract
+This paper develops a thermo-ecological augmentation of the Solow growth model
+that treats production as a physical throughput process generating both useful
+output and unavoidable thermodynamic waste. We introduce three coupled state
+variables absent from the standard framework: (i) physical thermodynamic
+output (TO), the energy waste, emissions, and material inefficiency created as a
+byproduct of production, valued at shadow prices derived from the social cost of
+carbon and analogous pollutant valuations; (ii) health capital (H), a stock
+variable linking pollution exposure to effective labor supply, cognitive performance,
+and total factor productivity; and (iii) natural capital (R), resource stocks subject
+to depletion and regeneration dynamics.
+We derive the modified Solow steady state in closed form and show that it depends
+on a thermo-ecological multiplier Ω = ϕ(TO/Y) · ζ(H) · θ(H) that is strictly less
+than unity when thermodynamic waste and health damage are positive. The steady-
+state capital intensity and output per worker are reduced by a factor that depends
+on pollution intensity, health capital, and the elasticity of damage. We characterize
+the thermodynamic growth trap: economies that allow waste intensity to rise
+converge to permanently lower balanced growth paths. We define Thermo-GDP
+(a damage-adjusted output measure) and connect it to existing green accounting
+frameworks (SEEA, Adjusted Net Savings, Inclusive Wealth). Extensions to Ramsey
+optimal growth, Hotelling resource extraction, and DSGE environmental shocks are
+previewed for companion papers.
+Keywords: economic growth, ecological economics, thermodynamics, health capital,
+environmental macroeconomics, productivity
+JEL Codes: O44, Q56, E13, Q57
+Page 1
+1. Introduction
+Modern economies convert low-entropy resources into high-entropy products, services,
+and waste at unprecedented scale. The Second Law of Thermodynamics guarantees that
+every production process generates some waste heat and disorder. This does not impose
+a hard ceiling on growth, efficiency can improve enormously before approaching
+theoretical limits, and knowledge-intensive and service-based production have very
+different throughput profiles than heavy industry. What it does impose is an irreducible
+physical cost that varies with technology, energy mix, and economic structure, and that
+standard macroeconomic models systematically under-account for. [1] Canonical growth
+models from Solow (1956) to modern DSGE treat the economy as a closed circular flow
+of income, with environmental impacts relegated to externality corrections applied after
+the fact.
+This omission has become untenable. The OECD projects that outdoor air pollution
+alone could reduce global GDP by approximately 1% by 2060 through labor productivity
+losses and healthcare expenditures. [2] The IPCC AR6 warns that unmitigated warming
+could reduce global economic output by 10–23% by 2100. [3] Empirical work in
+thermoeconomics has demonstrated that useful exergy explains a far larger share of
+historical growth than conventional capital–labor models suggest, substantially
+narrowing the Solow residual. [4,5]
+The goal of this paper is to augment the Solow growth model with state variables
+that make the costs of thermodynamic waste, health degradation, and resource
+depletion visible within the standard framework. The augmentation is designed to be
+conservative: when environmental costs are zero, the model collapses exactly to the
+textbook Solow result. When those costs are positive, the model generates a lower
+steady-state growth path, providing a formal basis for the intuition that dirty growth
+today cannibalizes future output.
+We focus on the Solow model because it is the canonical framework through which
+economists think about long-run growth, and because its simplicity makes the
+augmentation transparent. Extensions to the Ramsey–Cass–Koopmans optimal growth
+framework (where the discount rate becomes endogenous to environmental conditions),
+the Hotelling exhaustible resource model (where the optimal extraction path accounts
+for thermodynamic damage costs), and the New Keynesian DSGE framework (where
+environmental degradation generates a new class of supply shocks) are previewed in
+Section 7 and developed in companion papers.
+Page 2
+1.1 What This Framework Does Not Claim
+To prevent misreading, we state explicitly what this paper does not argue:
+• It does not imply hard thermodynamic limits to near-term economic growth.
+Efficiency improvements, compositional shifts, and innovation can reduce TO
+intensity substantially.
+• It does not claim that pollution is the dominant driver of the productivity
+slowdown. We propose it as a testable contributing mechanism, not a
+monocausal explanation.
+• It does not replace standard macroeconomics. It augments the Solow model with
+additional state variables; when those variables are at baseline, the standard
+model obtains exactly.
+• It does not reject technological progress or decoupling. Clean growth (rising
+output with falling TO intensity) is the policy objective the framework identifies.
+• It does not claim GDP is useless. It proposes Thermo-GDP as a complementary
+dashboard metric, not a replacement.
+1.2 Relation to Existing Literature
+This framework builds on Brock and Taylor’s Green Solow Model, [15] Nordhaus’s DICE
+integrated assessment model, [18] and the broader IAM tradition. It differs from these
+predecessors in four specific ways. First, health capital enters as an endogenous state
+variable affecting both labor quality and TFP simultaneously, creating a double feedback
+channel absent from standard IAMs. Second, thermodynamic waste is modeled as a
+production-side throughput variable (τ = TO/Y) rather than purely as downstream
+damage. The sustainability multiplier ϕ(τ) operates on the production function directly,
+not as a post-hoc damage subtraction. Third, the Ω amplification mechanism—
+environmental degradation reducing steady-state output by more than the direct
+penalty because it also depresses equilibrium capital accumulation—is a structural
+result not present in Green Solow or DICE. Fourth, Thermo-GDP is internally linked to
+the same shadow-price structure as the production model, ensuring consistency
+between the growth framework and the accounting framework. The contribution is not
+that any single element is entirely new, but that their integration into a single
+analytically tractable model produces emergent results (the amplification effect, the
+growth trap) that do not appear in the separate literatures.
+Page 3
+2. Theoretical Architecture
+2.1 The Economy as a Dissipative Structure
+Following Georgescu-Roegen (1971), we conceptualize the economy as an open
+dissipative system that maintains internal complexity by importing low-entropy
+resources and exporting high-entropy waste. [1] This implies that production is
+throughput (requiring continuous material and energy flows), waste generation is
+endogenous (a physical law, not a market failure), and sustainability requires that the
+biosphere’s finite sink capacity not be exceeded. [6]
+2.2 The Production Function
+We adopt a four-factor production function that nests the standard Cobb–Douglas as a
+special case. Following Ayres and Warr (2005, 2009), who showed that including useful
+exergy as a factor of production substantially resolves the Solow residual, [4,5] and Santos
+et al. (2018), who found exergy output elasticities of 0.29–0.46 across multiple
+countries, [7] we write:
+Yₜ = Aₜ · Kₜᵅ · Lₜᵝ · Uₜᵘ where α + β + u = 1 (1)
+where Kₜ is physical capital, Lₜ is labor, Uₜ is useful exergy (primary exergy multiplied by
+conversion efficiency fₜ), and Aₜ is residual TFP. In the core model (Section 3), we work
+with the standard two-factor reduction Y = AKᵅ(AL)¹⁻ᵅ for analytical tractability,
+treating exergy as embedded in TFP. The four-factor version is used for simulation and
+empirical calibration.
+2.3 Physical Thermodynamic Output
+We define physical thermodynamic output as the aggregate material and energy waste
+generated by production. Crucially, TO is measured in physical units (tonnes, joules,
+cubic meters)—it is a vector of waste flows, not a damage measure:
+TOₜ = (Eₜ, Pₜ, Mₜ) (2)
+where:
+• Eₜ = energy waste: lost heat, flaring, transmission losses (joules)
+• Pₜ = pollution emissions: CO₂e, PM₂.₅, NOₓ, SO₂, heavy metals, wastewater
+(tonnes)
+• Mₜ = material waste: landfill volumes, tailings, single-use plastics (tonnes)
+Note what is not in TO: health damage, ecosystem damage, and welfare losses. These are
+downstream consequences of physical TO, not components of it. This separation is
+essential to avoid double-counting. The causal chain runs:
+Page 4
+Production → Physical TO (waste flows) → Shadow-priced damage → Health effects →
+Feedback to production
+We define TO intensity as a dimensionless scalar index of waste-per-unit-output:
+τₜ ≡ ‖TOₜ‖ / (p₀ · Yₜ) (3)
+where ‖TOₜ‖ is a weighted norm that aggregates across waste types using damage-
+equivalence factors (e.g., global warming potentials convert all greenhouse gases to
+CO₂e tonnes), and p₀ is a fixed normalization constant with units of [currency per
+tonne-equivalent] chosen so that τ is dimensionless and bounded in [0, 1]. This is the
+same dimensional bridge that applied climate economists already use when expressing
+damages as “% of GDP”: physical flows are implicitly converted to a common monetary
+scale via a reference price. We make this normalization explicit. TO intensity is a
+production-side measure of how dirty the economy’s technology is. It is distinct from,
+and not inflated by, cleanup spending.
+2.4 Damage Valuation
+Physical TO causes economic damage through environmental degradation and health
+effects. We value this damage using shadow prices derived from the established social-
+cost literature:
+Dₜ = λ′ · TOₜ = λₑ Eₜ + λ p Pₜ + λₘ Mₜ (4)
+where λₙ is the marginal social damage per unit of waste type n. For greenhouse gases,
+the EPA’s 2023 central estimate is ~$190/tCO₂ at a 2% discount rate, [9] with Rennert et
+al. (2022) arriving at ~$185/tCO₂. [10] Analogous values exist for methane
+(~$1,600/tCH₄), nitrous oxide (~$5,400/tN₂O), and PM₂.₅ (valued through mortality
+and morbidity costs). [9]
+The total damage Dₜ has units of dollars per period. It represents the present value of all
+downstream harm: climate damage, ecosystem degradation, and health effects caused
+by one period’s physical waste flows. Health damage is a subset of Dₜ, not an additive
+component alongside it. This layered structure (physical flows, then prices, then
+downstream channels) eliminates the double-counting risk that arises when health
+damage appears both as a TO component and as a separate variable.
+2.5 Health Capital
+Health capital Hₜ is a state variable representing the productive capacity of the
+population’s health. It is driven down by pollution exposure (a downstream
+consequence of physical TO) and driven up by preventive health investment and
+baseline medical progress. The empirical foundations are strong: Graff Zivin and Neidell
+Page 5
+(2012) found that ozone exposure significantly reduced agricultural worker productivity,
+[11] while European firm-level studies estimate that a 1 μg/m³ PM₂.₅ increase reduces
+labor productivity by approximately 0.55%. [12]
+Per-Capita Exposure
+We define an exposure index that translates aggregate pollution into a per-person dose
+proxy:
+Xₜ = κ · Pₜ / Popₜ (5)
+where Pₜ is the pollution component of physical TO (Equation 2), κ is a dose–response
+scaling parameter calibrated to epidemiological data, and Popₜ is population. Note that
+Xₜ depends on physical pollution flows, not on monetized damage—maintaining the
+clean causal chain.
+Health Stock Dynamics
+The law of motion for health capital is:
+Ḣₜ = η₀ + η₁ hₜ − δₕ Hₜ − χ Xₜ (6)
+where:
+• η₀ = baseline health improvement from medical/sanitation progress
+• hₜ = HEₜᵖʳᵉᵛ / Yₜ = preventive health spending as a share of output
+• δₕ = natural health depreciation (aging, chronic disease)
+• χ Xₜ = health damage from environmental exposure, χ > 0
+In steady state, H* = (η₀ + η₁ h* − χ X*) / δₕ. Higher pollution exposure (X) reduces
+steady-state health capital; higher preventive spending (h) raises it.
+Health-Adjusted Inputs
+Health capital enters the production function through two channels:
+Lₜᵉᶠᶠ = Lₜ · θ(Hₜ) and Aₜᵉᶠᶠ = Aₜ · ζ(Hₜ) (7)
+where θ(H) = (H/H̄)b captures labor quality (absenteeism, physical capacity, work
+hours) and ζ(H) = (H/H̄)ᵐ captures the TFP channel (cognition, error rates, learning
+capacity), with b, m > 0 and H̄ = baseline health. When H = H̄, both functions equal
+unity and the standard production function obtains. This creates the feedback loop at
+the heart of the model: production → pollution → exposure → health decline → reduced
+effective inputs → lower output.
+Page 6
+The TFP channel ζ(H) is worth flagging: if pollution has been eroding cognitive
+performance in advanced economies, then measured TFP could be declining even as
+technological knowledge accumulates. This offers a testable contributing mechanism
+(not a complete explanation) for the observed productivity slowdown. A companion
+paper develops this hypothesis with firm-level data.
+2.6 Sustainability Metrics
+Following the critique that a single index can conflate production efficiency with
+remediation effort, we define two separate sustainability indicators:
+TO Intensity (production-side cleanliness):
+τₜ = ‖TOₜ‖ / (p₀ · Yₜ) (3, restated)
+This measures how much physical waste is generated per unit of output. It depends on
+technology, energy mix, and process efficiency. It is not affected by cleanup spending.
+Lower is better.
+Net Ecological Position (balance-sheet sustainability):
+NEPₜ = G(Rₜ) + Cₜʳᵉˢᵗᵒʳᵉ − Dₜ (8)
+where G(Rₜ) is natural regeneration, Cₜʳᵉˢᵗᵒʳᵉ is restoration/abatement investment, and
+Dₜ is monetized damage (Equation 4). NEP > 0 means the economy is building natural
+capital on net; NEP < 0 means it is drawing down. This is analogous to the World Bank’s
+Adjusted Net Savings but grounded in our damage-pricing framework. [21]
+The Sustainability Multiplier. For the core Solow model, we define the
+sustainability multiplier as a function of TO intensity:
+ϕ(τₜ) = (1 − τₜ)ψ where ψ > 0 (9)
+Axiomatic justification. We require ϕ to satisfy four properties: (A1) ϕ(0) = 1—zero
+waste imposes no penalty; (A2) ϕ is strictly decreasing in τ—more waste means less
+effective output; (A3) ϕ is convex—marginal damage is increasing; and (A4) as τ
+approaches its upper normalization bound, effective productive efficiency approaches
+zero. The family (1−τ)ψ is the simplest function satisfying all four axioms. The
+parameter ψ controls the convexity of the penalty: ψ < 1 yields a gentle curve (small
+increases in waste have modest effects), ψ = 1 is linear, and ψ > 1 generates a steep
+penalty for dirty economies.
+We emphasize that the qualitative results of the model, the amplified steady-state
+reduction and the signs of all comparative statics, hold for any ϕ that is decreasing,
+convex, and satisfies ϕ(0) = 1. The specific power form is chosen for tractability. The
+Page 7
+parameter ψ is, in principle, empirically estimable using cross-country regressions of
+TFP on TO intensity; a calibration strategy is outlined as a direction for future work.
+Note that ϕ depends only on TO intensity, not on restoration spending, resolving the
+perverse-incentive problem identified in the earlier formulation.
+2.7 Natural Capital Dynamics
+The stock of a renewable resource Rₜ evolves as:
+dRₜ/dt = G(Rₜ) − Cₜ (10)
+where G(R) = rR(1 − R/K) is logistic regeneration with carrying capacity K and intrinsic
+growth rate r, and Cₜ is extraction. Sustainable extraction requires Cₜ ≤ G(Rₜ) in the long
+run. For non-renewable resources (G ≈ 0), the Hotelling rule governs the optimal
+extraction path. [14] Our framework modifies the Hotelling condition by adding the
+marginal thermodynamic damage cost of extraction to the user cost. However, the
+correct sign and functional form of this modification require a careful Hamiltonian
+derivation that is beyond the scope of the present paper. Figure 1 summarizes the
+model architecture and the causal pathways linking production, thermodynamic output,
+health capital, and long-run growth.
+3. The Core Model: Thermo-Ecological Solow
+We now assemble the components into a single, formally specified growth model.
+3.1 Setup
+We work with the standard Solow assumptions: exogenous savings rate s, capital
+depreciation rate δ, labor force growth rate n, and Harrod-neutral technical progress at
+rate g. The production function is modified by the thermo-ecological multiplier:
+Yₜ = Ωₜ · F(Kₜ, Aₜ Lₜ) = Ωₜ · Kₜᵅ (Aₜ Lₜ)¹⁻ᵅ (11)
+where Ωₜ ≡ ϕ(τₜ) · ζ(Hₜ) · [θ(Hₜ)]¹⁻ᵅ is the thermo-ecological multiplier combining the
+sustainability penalty and both health channels. Note:
+• ϕ(τₜ) = (1 − τₜ)ψ — sustainability multiplier (Eq. 9)
+• ζ(Hₜ) = (Hₜ / H̄)ᵐ — health–TFP channel
+• θ(Hₜ) = (Hₜ / H̄)b — health–labor quality channel (enters with exponent 1−α
+from the production function)
+Capital accumulates in the standard way:
+K̇ₜ = sYₜ − δKₜ (12)
+Page 8
+Figure 1. Thermo-Ecological Architecture of the Model. Production generates physical
+thermodynamic output (TO), which creates downstream environmental and health damages.
+Health capital affects both labor quality and total factor productivity, feeding through the
+thermo-ecological multiplier Ω into capital accumulation and long-run output.
+Page 9
+3.2 Intensive Form
+Define capital per effective worker: kₜ ≡ Kₜ / (Aₜ Lₜ). Output per effective worker is:
+yₜ = Ωₜ · kₜᵅ (13)
+The fundamental Solow equation in intensive form becomes:
+k̇ₜ = s · Ωₜ · kₜᵅ − (n + g + δ) · kₜ (14)
+This is identical to the standard Solow equation except for the Ωₜ term multiplying the
+production function. When Ω = 1 (no environmental costs), Equation (14) reduces to the
+textbook version.
+3.3 Steady State
+At the steady state k̇ = 0:
+s · Ω* · (k*)ᵅ = (n + g + δ) · k* (15)
+Solving for k*:
+k* = [s · Ω* / (n + g + δ)]^(1/(1−α)) (16)
+Steady-state output per effective worker:
+y* = Ω* · [s · Ω* / (n + g + δ)]^(α/(1−α)) (17)
+which simplifies to:
+y* = (Ω*)^(1/(1−α)) · [s / (n + g + δ)]^(α/(1−α)) (18)
+This is the central result. Equation (18) is the standard Solow steady-state output
+multiplied by (Ω*)^(1/(1−α)). Since 0 < Ω ≤ 1 and 1/(1−α) > 1, the thermo-ecological
+multiplier has an amplified effect on steady-state output: a 10% reduction in Ω reduces
+y* by more than 10% because it also depresses equilibrium capital accumulation.
+3.4 Decomposing the Multiplier
+Expanding Ω*:
+Ω* = (1 − τ*)ψ · (H*/H̄)ᵐ · (H*/H̄)^(b(1−α)) (19)
+This reveals three distinct drags on the steady state:
+• Waste drag: (1 − τ*)ψ. Higher TO intensity (dirtier technology) lowers potential
+output.
+• Cognitive drag: (H*/H̄)ᵐ. Pollution-induced health deterioration impairs TFP
+through reduced cognition, increased errors, slower learning.
+Page 10
+• Labor drag: (H*/H̄)^(b(1−α)). Health deterioration reduces effective labor
+supply through absenteeism, shorter work hours, reduced physical capacity.
+In the standard Solow model (H = H̄, τ = 0), all three terms equal unity, Ω = 1, and the
+standard steady state obtains. This confirms that the augmented model nests the
+original as a special case.
+3.5 Comparative Statics
+Differentiating Equation (16) with respect to the key environmental parameters:
+∂k*/∂τ < 0 — dirtier production → lower capital intensity (20a)
+∂k*/∂H > 0 — healthier population → higher capital intensity (20b)
+∂k*/∂ψ < 0 (for τ > 0) — steeper penalty → lower steady state (20c)
+These signs are unambiguous and match economic intuition. A complete derivation is
+provided in Appendix B.
+3.6 The Thermodynamic Growth Trap
+The growth trap arises when Ωₜ is declining over time; i.e., when TO intensity is rising
+and/or health capital is falling. In this case, the steady state itself is moving downward:
+the economy is converging toward a target that is retreating. Short-run GDP growth
+remains positive (the economy is still accumulating capital), but the long-run balanced
+growth path is lower than it would be under stable environmental conditions.
+Critically, the trap is invisible in conventional GDP. An economy in the trap shows
+positive output growth, normal unemployment, and no obvious distress while its
+sustainable productive capacity is silently eroding. Only a damage-adjusted measure like
+Thermo-GDP (Section 4) reveals the deterioration. This is perhaps the framework’s
+most policy-relevant finding.
+This mechanism generates a testable contributing hypothesis for secular stagnation:
+if TO intensity and health damage have been rising in advanced economies since the
+1970s (a period coinciding with the observed productivity slowdown), the
+thermodynamic drag term Ωₜ may account for part of the deceleration. It also offers a
+candidate explanation for convergence failure: developing economies with high τ,
+low H, and depleted R face effective steady states far below the standard Solow
+prediction, potentially constituting poverty traps. Both hypotheses are developed and
+tested in companion papers.
+Clean growth and endogenous τ decline. It is essential to emphasize that the
+framework is not anti-growth and does not predict that τ must rise. Historical evidence
+shows that TO intensity has fallen substantially in many advanced economies through
+Page 11
+energy efficiency improvements, compositional shifts toward services, regulatory
+pressure, and technological innovation. Between 1990 and 2020, the EU reduced
+greenhouse gas emissions per unit of GDP by roughly 50%. The model’s prediction is
+conditional: when τ rises (or fails to fall fast enough relative to growing output), the
+consequences propagate through Ω to the steady state. Clean growth—rising Y with
+falling τ—is not only possible within the model but is precisely the policy objective it
+identifies. An economy that drives τ toward zero converges to the standard Solow steady
+state from below, with Ω → 1. The thermodynamic framing does not imply secular
+pessimism; it identifies the conditions under which optimism is warranted.
+4. Thermo-GDP
+We define Thermo-GDP as:
+Thermo-GDPₜ = GDPₜ − Dₜ = GDPₜ − λ′ · TOₜ (21)
+where Dₜ is the monetized damage from Equation (4). This is a Hicksian “green net
+product”: the maximum output the economy could sustain indefinitely without
+depleting natural and health capital stocks. It builds on and synthesizes:
+• UN SEEA-EA: the international statistical standard for ecosystem accounting.
+SEEA provides the data architecture; our model provides the theoretical welfare
+interpretation. [19]
+• Adjusted Net Savings: the World Bank’s measure of “genuine savings.”
+Thermo-GDP extends this by incorporating health capital. [21]
+• Inclusive Wealth: the UNEP stock-based sustainability indicator. Our resource
+dynamics and health stock provide the flow counterparts to inclusive wealth
+stocks. [22]
+• GPI / ISEW: earlier cost-subtraction approaches. Our framework provides
+microfounded shadow prices via the social-cost literature rather than ad hoc
+adjustments. [20]
+The key advantage of Thermo-GDP over these predecessors is theoretical grounding:
+the damage subtraction Dₜ is derived from the same shadow prices that enter the
+modified production function, ensuring internal consistency between the growth model
+and the accounting framework.
+5. Planetary Boundary Constraints
+Rockström et al. (2009) identified nine Earth-system thresholds defining a safe
+operating space. [23] Richardson et al. (2023) report that six of nine have been
+Page 12
+transgressed. [24,25] These can enter the model as penalty functions in the welfare
+objective:
+Φ(Rₜ) = Σₙ ωₙ · max(0, R̄ₙ − Rₙ,ₜ)² (22)
+where ωₙ weights boundary n and (R̄ₙ − Rₙ,ₜ) measures transgression. This is consistent
+with Raworth’s “Doughnut Economics” framing [26] but provides a pathway toward
+formal optimization within a Ramsey-style growth framework.
+6. Empirical Strategy and Testability
+The framework generates several testable predictions:
+• Prediction 1: Countries with lower TO intensity (τ = TO/GDP) should exhibit
+higher future TFP growth, controlling for standard determinants.
+• Prediction 2: Sector-level PM₂.₅ exposure should negatively predict labor
+productivity, with stronger effects in cognitively intensive industries. [12]
+• Prediction 3: Thermo-GDP should diverge from conventional GDP most
+sharply in resource-intensive economies, while converging in economies
+undergoing green transitions.
+• Prediction 4: Pollution reduction should generate positive growth effects
+exceeding the narrowly measured health cost savings (i.e., the feedback loop
+amplifies returns to abatement). [11,13]
+• Prediction 5: Cross-country income convergence rates should be moderated by
+initial TO intensity and health capital, with high-τ, low-H countries converging
+more slowly.
+Data sources include: SEEA accounts (27 EU member states), WHO Global Health
+Estimates, satellite-derived PM₂.₅ data (van Donkelaar et al.), IEA energy balances, and
+the World Bank’s Adjusted Net Savings database. These datasets provide a feasible
+foundation for future cross-country calibration and simulation exercises. [19,21]
+6.1 Anchor Regression: The Health–Productivity Channel
+The empirically strongest entry point for testing the framework is the health–
+productivity feedback loop, where causal estimates and measurable elasticities already
+exist in the literature. We propose the following baseline panel specification, using
+standard econometric notation where symbols are local to this regression and distinct
+from model parameters elsewhere in the paper:
+Δ ln(TFP)ᵢₜ = β₁ τᵢ,ₜ₋₁ + β₂ ln(Hᵢ,ₜ₋₁) + γ′ Xᵢₜ + αᵢ + δₜ + εᵢₜ
+Page 13
+where i indexes countries, t indexes years, τᵢ,ₜ₋₁ is lagged TO intensity (proxied by CO₂e
+emissions per unit of GDP from SEEA/IEA), Hᵢ,ₜ₋₁ is lagged health capital (proxied by
+HALEs from WHO, or inverse PM₂.₅ exposure from satellite data), Xᵢₜ is a vector of
+standard controls (human capital, trade openness, institutional quality), αᵢ are country
+fixed effects, and δₜ are year fixed effects. The model predicts β₁ < 0 (higher waste
+intensity depresses future TFP) and β₂ > 0 (higher health capital boosts future TFP).
+Satellite-derived PM₂.₅ exposure serves as an instrument for the health channel,
+exploiting atmospheric transport patterns for identification. This specification can be
+estimated with existing data; it does not require waiting for new measurement
+infrastructure.
+7. Theoretical Extensions of the Core Framework
+The Solow model developed above is deliberately the simplest possible vehicle for the
+core ideas. Richer frameworks require the following extensions:
+7.1 Ramsey–Cass–Koopmans
+Replace the exogenous savings rate with an optimizing representative agent who
+chooses consumption, savings, and restoration investment. The modified Euler equation
+is:
+Ċ/C = (1/σ)[f′(k) · Ω − δ − ρ + μ(∂Ψ/∂NEP)(∂NEP/∂Cʳᵉˢᵗ)] (23)
+where the last term captures the welfare gain from restoration investment. This
+extension makes the effective social discount rate endogenous: when environmental
+damage is high and restoration is productive, the model implies a lower rate than the
+standard Ramsey calibration, closer to Stern than Nordhaus, but derived from model
+structure rather than ethical assumption.
+7.2 Hotelling Resource Extraction
+The optimal extraction path for exhaustible resources is modified by the marginal
+thermodynamic damage cost. The social planner’s Hamiltonian includes the shadow
+price of natural capital and the damage from extraction-related TO. The resulting price
+path differs from the standard Hotelling rule; the direction and magnitude of the
+deviation depend on the relative rates of damage accumulation and discount. A full
+Hamiltonian derivation, including the correct treatment of signs and dynamic shadow
+prices, is left for future work.
+7.3 DSGE Environmental Shocks
+TO-driven environmental shocks such as droughts, heat waves, and resource price
+spikes, can be incorporated as negative TFP shocks (via ϕ and ζ), labor supply shocks
+Page 14
+(via θ), and cost-push shocks (via resource scarcity) in standard DSGE estimation
+toolkits. This generates a formal channel through which environmental degradation
+contributes to stagflation.
+7.4 Optimal Carbon Price Path
+The shadow prices λ in Equation (4) are equilibrium objects whose optimal time paths
+depend on the full model structure. Rather than a static social cost of carbon, the
+framework implies a dynamic price trajectory. Deriving and calibrating this trajectory is
+left for future work.
+8. Policy Implications
+8.1 Pigouvian Pricing of TO
+The shadow prices λ provide the theoretically correct tax rates on each waste
+component. For carbon: ~$190/tCO₂. [9] For PM₂.₅: the labor productivity co-benefits
+alone may be worth $950–$3,000 per household per year per μg/m³ reduction. [12]
+8.2 Sustainability-Weighted National Accounting
+Adopt Thermo-GDP as a complementary dashboard metric alongside conventional
+GDP, consistent with the Stiglitz–Sen–Fitoussi Commission recommendations. [27]
+8.3 Directed Innovation Policy
+Subsidize technologies that reduce τ (TO intensity). Following Acemoglu et al. (2012), [16]
+early subsidies for clean technologies can permanently redirect the innovation path.
+8.4 Health-Inclusive Cost–Benefit Analysis
+Regulatory cost–benefit analyses should incorporate the productivity co-benefits of
+pollution reduction through the health capital channel. Current practice accounts for
+avoided mortality but typically omits the morbidity–productivity–TFP feedback loop
+formalized here.
+9. Future Research Directions
+This paper establishes the theoretical architecture. Potential companion papers include:
+Optimal Carbon Price Trajectory. Derives the full time path of optimal
+thermodynamic prices from the social planner’s Hamiltonian. Includes the modified
+Hotelling rule with complete sign analysis.
+Discount Rate Under Thermodynamic Constraints. Shows the effective social
+discount rate is endogenous to environmental conditions via the Ramsey extension.
+Page 15
+DSGE Environmental Shocks. Embeds TO-driven shocks in the NK-DSGE
+framework. Tests whether post-2020 inflation contains a thermodynamic component.
+Thermodynamic Drag and Secular Stagnation. Calibrates the model to
+US/EU/Japan 1970–2025 and tests whether rising τ correlates with the productivity
+slowdown.
+Convergence Failure and Environmental Poverty Traps. Shows conditions
+under which Ω is low enough to generate poverty traps despite favorable savings rates.
+10. Limitations
+We acknowledge several limitations of the present framework that circumscribe the
+claims we make and define the work remaining for the companion papers.
+First, the thermo-ecological multiplier Ω is reduced-form. The sustainability
+multiplier ϕ(τ) = (1−τ)ψ is axiomatically motivated and analytically convenient, but it is
+not micro-founded from optimizing firm or consumer behavior. The qualitative results
+are robust to alternative functional forms (any decreasing, convex ϕ with ϕ(0) = 1
+preserves the signs of all comparative statics and the amplification result), but the
+quantitative predictions depend on ψ, which must be estimated empirically. Until such
+calibrations are performed, the framework should be interpreted primarily as a
+qualitative and structural model rather than a quantitative forecasting engine.
+Second, TO intensity dynamics are not fully endogenized in the present paper.
+We treat τ as a slow-moving state variable influenced by technology, policy, and
+economic structure, but we do not derive its evolution from optimizing behavior. In
+reality, τ responds endogenously to prices, regulation, and innovation incentives.
+Extensions incorporating directed technical change and Ramsey-style intertemporal
+optimization partially address this issue, but a fully endogenous τ pathway remains an
+open research problem.
+Third, the aggregation of heterogeneous waste streams into a scalar TO intensity
+index is a significant simplification. Energy waste, greenhouse gases, particulate matter,
+and material waste have different spatial distributions, temporal profiles, and damage
+pathways. The weighted-norm aggregation in Equation (3) is a tractable first
+approximation, but it suppresses heterogeneity that may matter for policy design.
+Sectoral disaggregation and multi-region calibration represent important directions for
+future empirical work.
+Fourth, causal identification in the health–productivity channel is challenging.
+While the micro-econometric literature establishes causal effects of pollution on worker
+productivity in specific settings, [11,12] extrapolating these to macro-level TFP effects
+Page 16
+involves aggregation assumptions that have not been fully tested. The regression
+specification in Section 6.1 provides a starting point, but instrument validity and general
+equilibrium feedbacks require careful treatment.
+Fifth, the model currently abstracts from distributional effects. Thermodynamic
+waste, health damage, and resource depletion fall disproportionately on lower-income
+populations and regions. The representative-agent Solow framework cannot capture
+these distributional dynamics. Heterogeneous-agent extensions would be valuable but
+are beyond the scope of this paper.
+11. Conclusion
+This paper augments the Solow growth model with three coupled state variables,
+including physical thermodynamic output, health capital, and natural capital, to model
+the economy as an open dissipative system constrained by the biosphere. The central
+result is the thermo-ecological multiplier Ω, which enters the steady state with amplified
+effect: a 10% degradation in environmental and health conditions reduces long-run
+output per worker by more than 10%, because it also depresses equilibrium capital
+accumulation.
+The framework is designed to be analytically transparent. It nests the standard Solow
+model as a special case (Ω = 1). Its predictions are testable with existing data: TO
+intensity predicts TFP growth, health damage feeds back to output, and dirty economies
+converge to lower growth paths. And its primary applied innovation, Thermo-GDP,
+connects directly to established accounting systems (SEEA, Adjusted Net Savings,
+Inclusive Wealth) while providing microfounded shadow prices.
+The contribution is deliberately modest in scope: one canonical growth model, cleanly
+specified, with formal derivations. The questions this framework opens, including the
+optimal carbon price path, the endogenous discount rate, and the role of
+thermodynamic drag in secular stagnation and convergence failure, represent promising
+directions for future theoretical and empirical research.
+Page 17
+Appendix A: Summary of Key Equations
+(1) Production Function: Y = A · Kᵅ · Lᵝ · Uᵘ (α+β+u=1)
+(2) Physical TO: TO = (E, P, M) — energy waste, pollution, material waste
+(3) TO Intensity: τ = ‖TO‖ / (p₀ · Y) (dimensionless)
+(4) Damage Valuation: D = λ′ · TO = λₑE + λ P + λₘM
+p
+(5) Exposure Index: X = κ · P / Pop
+(6) Health Dynamics: Ḣ = η₀ + η₁h − δₕH − χX
+(7) Health-Adjusted Inputs: Lᵉᶠᶠ = L·θ(H), Aᵉᶠᶠ = A·ζ(H)
+(8) Net Ecological Position: NEP = G(R) + Cʳᵉˢᵗ − D
+(9) Sustainability Multiplier: ϕ(τ) = (1 − τ)ψ
+(10) Resource Depletion: dR/dt = G(R) − C
+(11) Modified Production: Y = Ω · Kᵅ(AL)¹⁻ᵅ where Ω = ϕ·ζ·θ¹⁻ᵅ
+(14) Solow Dynamics: k̇ = sΩkᵅ − (n+g+δ)k
+(16) Steady-State Capital: k* = [sΩ*/(n+g+δ)]^(1/(1−α))
+(18) Steady-State Output: y* = (Ω*)^(1/(1−α)) · [s/(n+g+δ)]^(α/(1−α))
+(21) Thermo-GDP: Thermo-GDP = GDP − λ′·TO
+(22) Boundary Penalty: Φ(R) = Σ ωₙ · max(0, R̄ₙ − Rₙ)²
+Page 18
+Appendix B: Formal Derivations
+B.1 Steady-State Derivation
+Step 1. Begin with the fundamental Solow equation in per-effective-worker form:
+k̇ = s · Ω · kᵅ − (n + g + δ) · k
+Step 2. At the steady state k̇ = 0, so:
+s · Ω* · (k*)ᵅ = (n + g + δ) · k*
+Step 3. Divide both sides by k*:
+s · Ω* · (k*)ᵅ⁻¹ = n + g + δ
+Step 4. Solve for k*:
+(k*)ᵅ⁻¹ = (n + g + δ) / (s · Ω*)
+k* = [(n + g + δ) / (s · Ω*)]^(1/(α−1))
+k* = [s · Ω* / (n + g + δ)]^(1/(1−α)) … (16)
+Step 5. Steady-state output per effective worker:
+y* = Ω* · (k*)ᵅ = Ω* · [s · Ω* / (n + g + δ)]^(α/(1−α))
+Collecting powers of Ω*:
+y* = (Ω*)^(1 + α/(1−α)) · [s / (n + g + δ)]^(α/(1−α))
+y* = (Ω*)^(1/(1−α)) · [s / (n + g + δ)]^(α/(1−α)) … (18)
+Interpretation: The standard Solow steady-state output is [s/(n+g+δ)]^(α/(1−α)).
+Our augmented model multiplies this by (Ω*)^(1/(1−α)). Since 0 < Ω ≤ 1 and 1/(1−α)
+> 1 (for α ∈ (0,1)), the environmental penalty is amplified: if α = 0.3, a 10% reduction
+in Ω lowers y* by approximately 14.0% (= 1 − 0.9^(1/0.7)).
+B.2 Comparative Statics
+Proposition 1. ∂k*/∂Ω > 0.
+From Equation (16): k* = [sΩ*/(n+g+δ)]^(1/(1−α)). Since 1/(1−α) > 0 and s,
+(n+g+δ) > 0, k* is strictly increasing in Ω*. □
+Proposition 2. ∂k*/∂τ < 0.
+By the chain rule: ∂k*/∂τ = (∂k*/∂Ω)(∂Ω/∂ϕ)(∂ϕ/∂τ). We have ∂k*/∂Ω > 0 (Prop 1),
+∂Ω/∂ϕ > 0 (since Ω = ϕ·ζ·θ¹⁻ᵅ and ζ, θ > 0), and ∂ϕ/∂τ = −ψ(1−τ)^(ψ−1) < 0. Hence
+∂k*/∂τ < 0. □
+Proposition 3. ∂k*/∂H > 0.
+Page 19
+By the chain rule: ∂k*/∂H = (∂k*/∂Ω)[ϕ · ∂(ζ·θ¹⁻ᵅ)/∂H]. Since ζ = (H/H̄)ᵐ and θ¹⁻ᵅ
+= (H/H̄)^(b(1−α)), we get ζ·θ¹⁻ᵅ = (H/H̄)^(m+b(1−α)), which is strictly increasing in
+H. □
+Proposition 4 (Amplification). The elasticity of y* with respect to Ω exceeds
+unity.
+From (18): ∂ln(y*)/∂ln(Ω) = 1/(1−α) > 1 for all α ∈ (0,1). With α = 0.3, the elasticity
+is 1.43. With α = 0.4, it is 1.67. This means that environmental degradation has a
+leveraged effect on long-run output, because it depresses capital accumulation as
+well as direct production efficiency. □
+B.3 Transition Dynamics
+The speed of convergence to steady state is determined by linearizing Equation (14)
+around k*:
+d(ln k)/dt ≈ −(1−α)(n + g + δ) · [ln(k) − ln(k*)]
+The convergence rate λᶜ = (1−α)(n+g+δ) is identical to the standard Solow
+convergence rate. The thermo-ecological augmentation changes where the economy
+converges to (k* is lower when Ω < 1) but not how fast it converges. This means the
+growth trap is not about slow convergence, it is about converging to the wrong place.
+B.4 Health Capital Steady State
+Setting Ḣ = 0 in Equation (6):
+0 = η₀ + η₁ h* − δₕ H* − χ X*
+H* = (η₀ + η₁ h* − χ X*) / δₕ
+Substituting X* = κ P*/Pop* and noting that P* depends on Y* and τ*:
+H* = [η₀ + η₁ h* − χκτ* Y* / Pop*] / δₕ
+Since Y* itself depends on H* (through Ω), this defines H* implicitly. The system has
+a fixed-point structure: H* and Y* must be solved simultaneously. For existence and
+uniqueness, we require that the feedback is not too strong: χκτ must be small enough
+that the health equation’s ‘damage slope’ does not exceed its ‘recovery slope.’ Under
+empirically plausible parameter values, this condition is satisfied and the fixed point
+is unique and stable.
+Page 20
+Acknowledgements
+The author used large language model tools during the drafting and editing process for
+feedback on clarity, structure, and exposition. All theoretical claims, derivations, and
+errors remain the responsibility of the author.
+References
+Thermodynamic and Ecological Foundations
+[1] Georgescu-Roegen, N. (1971). The Entropy Law and the Economic Process. Harvard
+University Press.
+[4] Ayres, R.U. & Warr, B. (2005). Accounting for growth: The role of physical work. Structural
+Change and Economic Dynamics, 16(2), 181–209.
+[5] Ayres, R.U. & Warr, B. (2009). The Economic Growth Engine: How Energy and Work Drive
+Material Prosperity. Edward Elgar.
+[6] Daly, H. (2005). Economics in a Full World. Scientific American, 293(3), 100–107.
+[7] Santos, J., Domingos, T., Sousa, T. & St. Aubyn, M. (2018). Useful exergy is key in obtaining
+plausible aggregate production functions. Ecological Economics, 148, 103–120.
+[8] Kümmel, R. (1989). Energy as a factor of production and entropy as a pollution indicator in
+macroeconomic modeling. Ecological Economics, 1(2), 161–180.
+[28] Brockway, P.E., Owen, A., Brand-Correa, L.I. & Hardt, L. (2015). Energy rebound as a
+potential threat to a low-carbon future: Findings from a new exergy-based national-level
+rebound approach. Energies, 8(11), 12585–12615.
+Growth–Environment Models
+[14] Hotelling, H. (1931). The Economics of Exhaustible Resources. Journal of Political
+Economy, 39(2), 137–175.
+[15] Brock, W.A. & Taylor, M.S. (2010). The Green Solow Model. Journal of Economic Growth,
+15(2), 127–153.
+[16] Acemoglu, D., Aghion, P., Bursztyn, L. & Hemous, D. (2012). The Environment and
+Directed Technical Change. American Economic Review, 102(1), 131–166.
+[17] Ramsey, F.P. (1928). A Mathematical Theory of Saving. The Economic Journal, 38(152),
+543–559.
+[18] Nordhaus, W.D. (2017). Revisiting the social cost of carbon. Proceedings of the National
+Academy of Sciences, 114(7), 1518–1523.
+[29] Stern, N. (2006). The Economics of Climate Change: The Stern Review. Cambridge
+University Press.
+Page 21
+[30] Barrage, L. & Nordhaus, W.D. (2024). Policies, Projections, and the Social Cost of Carbon:
+Results from the DICE-2023R Model. Proceedings of the National Academy of Sciences,
+121(13).
+Damage Valuation
+[9] U.S. Environmental Protection Agency. (2023). Report on the Social Cost of Greenhouse
+Gases: Estimates Incorporating Recent Scientific Advances.
+[10] Rennert, K., Errickson, F., Prest, B.C., et al. (2022). Comprehensive evidence implies a
+higher social cost of CO₂. Nature, 610, 687–692.
+[3] IPCC. (2022). Climate Change 2022: Mitigation of Climate Change. Contribution of
+Working Group III to the Sixth Assessment Report of the Intergovernmental Panel on
+Climate Change.
+Health–Productivity Evidence
+[2] OECD (2016). The Economic Consequences of Outdoor Air Pollution. OECD Publishing.
+[11] Graff Zivin, J. & Neidell, M. (2012). The Impact of Pollution on Worker Productivity.
+American Economic Review, 102(7), 3652–3673.
+[12] Dechezleprêtre, A., Rivers, N., Stadler, B. & Yonezawa, H. (2025). The Impact of Air
+Pollution on Labour Productivity. OECD Science, Technology and Industry Policy Papers.
+[13] Chen, S., Oliva, P. & Zhang, P. (2018). Air pollution, student health, and school absences.
+Journal of Environmental Economics and Management, 92, 465–497.
+Measurement and Accounting
+[19] United Nations. (2021). System of Environmental-Economic Accounting—Ecosystem
+Accounting (SEEA-EA).
+[20] Lawn, P.A. (2003). A theoretical foundation to support the Index of Sustainable Economic
+Welfare (ISEW), Genuine Progress Indicator (GPI), and other related indexes. Ecological
+Economics, 44(1), 105–118.
+[21] World Bank. (2023). The Changing Wealth of Nations 2024: Managing Assets for the
+Future.
+[22] Arrow, K.J., Dasgupta, P., Goulder, L.H., Mumford, K.J. & Oleson, K. (2012).
+Sustainability and the measurement of wealth. Environment and Development Economics,
+17(3), 317–353.
+[27] Stiglitz, J.E., Sen, A. & Fitoussi, J.-P. (2009). Report by the Commission on the
+Measurement of Economic Performance and Social Progress.
+Page 22
+Planetary Boundaries
+[23] Rockström, J., Steffen, W., Noone, K., et al. (2009). A safe operating space for humanity.
+Nature, 461, 472–475.
+[24] Steffen, W., Richardson, K., Rockström, J., et al. (2015). Planetary boundaries: Guiding
+human development on a changing planet. Science, 347(6223), 1259855.
+[25] Richardson, K., Steffen, W., Lucht, W., et al. (2023). Earth beyond six of nine planetary
+boundaries. Science Advances, 9(37).
+[26] Raworth, K. (2017). Doughnut Economics: Seven Ways to Think Like a 21st-Century
+Economist. Chelsea Green Publishing.
+Additional
+[31] Solow, R.M. (1956). A Contribution to the Theory of Economic Growth. Quarterly Journal
+of Economics, 70(1), 65–94.
+[32] Solow, R.M. (1987). We’d better watch out. New York Times Book Review, July 12.
+[33] Grossman, G.M. & Krueger, A.B. (1995). Economic Growth and the Environment.
+Quarterly Journal of Economics, 110(2), 353–377.
+[34] Hartwick, J.M. (1977). Intergenerational Equity and Exhaustible Resources. American
+Economic Review, 67(5), 972–974.
+Page 23

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thermodynamic Waste, Health Capital, and Long-Run Growth — An Adversarial Analysis and Empirical Stress-Test</title>
+<style>
+  @page { size: Letter; margin: 0.95in 1in; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: Georgia, "Times New Roman", serif; font-size: 10.8pt; line-height: 1.46;
+         color: #111; text-align: justify; margin: 0; }
+  h1.title { text-align: center; font-size: 19pt; line-height: 1.2; margin: 0 0 2px; }
+  p.subtitle { text-align: center; font-style: italic; font-size: 12.5pt; color: #333; margin: 4px 0 14px; }
+  p.byline { text-align: center; font-size: 10.5pt; color: #444; margin: 2px 0; line-height: 1.3; }
+  p.date { text-align: center; font-size: 10.5pt; color: #666; margin: 8px 0 18px; }
+  h2.abh { text-align: center; font-size: 11pt; margin: 16px 0 6px; }
+  .abstract { margin: 0 6%; font-size: 10.2pt; line-height: 1.45; }
+  .meta { margin: 10px 6% 0; font-size: 9.4pt; color: #333; }
+  h2 { font-size: 12pt; margin: 18px 0 6px; border-bottom: 1px solid #ccc; padding-bottom: 2px; }
+  h3 { font-size: 10.8pt; margin: 12px 0 4px; }
+  p { margin: 6px 0; }
+  .eq { text-align: center; font-style: italic; margin: 8px 0; font-size: 10.8pt; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.2pt; }
+  th, td { border: 1px solid #bbb; padding: 3px 6px; text-align: left; vertical-align: top; }
+  th { background: #eee; }
+  td.n, th.n { text-align: right; }
+  pre { font-family: "Consolas","Courier New",monospace; font-size: 7.9pt; line-height: 1.25;
+        background: #f6f6f6; border: 1px solid #ddd; padding: 8px; white-space: pre; overflow: hidden; }
+  code { font-family: "Consolas","Courier New",monospace; font-size: 9.2pt; background:#f2f2f2; padding:0 2px; }
+  .sev-f { color:#a00; font-weight:bold; } .ok { color:#070; font-weight:bold; }
+  .refs { font-size: 9.2pt; line-height: 1.35; }
+  .refs p { margin: 3px 0; padding-left: 1.4em; text-indent: -1.4em; }
+  .small { font-size: 9.2pt; color:#444; }
+  .pagebreak { page-break-before: always; }
+  hr { border: none; border-top: 1px solid #ccc; margin: 14px 0; }
+</style>
+</head>
+<body>
+
+<h1 class="title">Thermodynamic Waste, Health Capital, and Long-Run Growth</h1>
+<p class="subtitle">An Adversarial Analysis and Empirical Stress-Test of the Thermo-Ecological Solow Framework</p>
+<p class="byline">Research_Analyzer &middot; prepared with Claude Code (Anthropic)</p>
+<p class="byline">A multi-agent reconstruction, critique, novelty assessment, and real-data test of Greenlee (2026)</p>
+<p class="date">May 2026</p>
+
+<h2 class="abh">Abstract</h2>
+<div class="abstract">
+We subject the working paper <i>&ldquo;Thermodynamic Waste, Health Capital, and Long-Run Growth&rdquo;</i>
+(Greenlee, 2026) to a structured, multi-agent adversarial analysis (&asymp;35 subagents across two
+orchestrated workflows, &asymp;1.5M tokens) followed by an executed empirical test on real cross-country
+data. We find the framework&rsquo;s two headline results &mdash; the <i>amplification effect</i> and the
+<i>thermodynamic growth trap</i> &mdash; are restatements of the textbook Solow / Mankiw&ndash;Romer&ndash;Weil
+level effect rather than emergent structure, and that a multiplicative output-damage multiplier already
+exists in Nordhaus&rsquo;s DICE; the novelty claim survives only against the Green Solow model. The one
+genuinely novel and sharply testable element is the cognitive total-factor-productivity channel
+&zeta;(H). Independent verification confirmed the central novelty critique, <i>refuted one of our own
+findings</i> (the health&ndash;output equilibrium is provably unique and stable), and surfaced a flagship
+structural problem: because waste intensity &tau; carries output in its denominator, the multiplier
+&Omega; is endogenous to output and the &ldquo;closed-form&rdquo; steady state is in fact implicit. Two
+citation errors are corrected (the social cost of N&#8322;O; an IPCC working-group mis-attribution). A
+fixed-effects test on 164 countries reveals an Environmental-Kuznets gradient: the trap <i>dissolves</i>
+for rich economies that decouple but <i>persists</i> for poor economies that do not &mdash; supporting the
+paper&rsquo;s convergence-failure prediction while undercutting its secular-stagnation framing &mdash; and
+the implied output gap is shown to be magnitude-indeterminate.
+</div>
+<div class="meta">
+<b>Verdict:</b> novelty &asymp; 3/10 (mathematics), 6/10 (synthesis); no fatal errors; one borderline-fatal
+structural issue (G1). &nbsp; <b>JEL:</b> O44, Q56, E13, Q57. &nbsp; <b>Method:</b> Claude Code multi-agent
+orchestration with adversarial verification and executed empirical analysis.
+</div>
+
+<h2>1. Method: the system of agents</h2>
+<p>The analysis was produced by a main orchestrating loop that read the source paper, wrote a set of
+structured working documents, launched two multi-agent <i>workflows</i>, and finally executed an empirical
+test within a single context. The deliberate design principle was <i>separation of reconstruction from
+critique</i>, and <i>adversarial verification</i> of every claim &mdash; including our own.</p>
+<p><b>Workflow 1 (Verification, 16 agents).</b> Seven agents were each instructed to <i>defend</i> the paper
+against one of our draft findings; six fact-checked citations against the literature with live web search;
+three &ldquo;completeness critics&rdquo; (dynamics, econometrics, theory) hunted for missed issues. This pass
+confirmed the central critique, <i>refuted</i> one of our findings, and discovered the flagship structural
+issue G1.</p>
+<p><b>Workflow 2 (Hypothesis-test system, 19 agents).</b> Eight agents formalized one falsifiable hypothesis
+each; a four-agent <i>idea-sharing panel</i> (identification-skeptic, data-feasibility-engineer,
+power/pre-registration-analyst, discrimination-designer) read all drafts and cross-critiqued them; six agents
+acquired real data with verified access paths; one assembled a starter dataset and analysis code.</p>
+<p><b>Empirical execution.</b> A two-way fixed-effects estimator with cluster-robust standard errors was
+implemented in pure <code>numpy</code> and run on the Our World in Data CO&#8322; panel (164 countries). A
+note on collaboration tooling (&ldquo;Claude Teams&rdquo;) and its security settings is given in the project
+README; the panel collaboration here was local and in-workflow.</p>
+
+<h2>2. The framework under analysis</h2>
+<p>The paper augments the Solow model so production is scaled by a <i>thermo-ecological multiplier</i>:</p>
+<p class="eq">Y = &Omega; &middot; K<sup>&alpha;</sup>(AL)<sup>1&minus;&alpha;</sup>, &nbsp;&nbsp;
+&Omega; = &phi;(&tau;) &middot; &zeta;(H) &middot; &theta;(H)<sup>1&minus;&alpha;</sup></p>
+<p>with sustainability multiplier &phi;(&tau;) = (1&minus;&tau;)<sup>&psi;</sup>, waste intensity
+&tau; = &Vert;TO&Vert;/(p&#8320;&middot;Y), and health capital H entering <i>both</i> labor quality
+&theta;(H) = (H/H&#772;)<sup>b</sup> and TFP &zeta;(H) = (H/H&#772;)<sup>m</sup>. Solving the Solow steady
+state gives the paper&rsquo;s central result,</p>
+<p class="eq">y* = (&Omega;*)<sup>1/(1&minus;&alpha;)</sup> &middot; [s/(n+g+&delta;)]<sup>&alpha;/(1&minus;&alpha;)</sup>,</p>
+<p>and an accounting companion, Thermo-GDP = GDP &minus; D where D = &lambda;&prime;&middot;TO is shadow-priced
+damage. When &Omega; = 1 the model collapses to textbook Solow. The paper claims this multiplier produces an
+<i>amplified</i> steady-state penalty and a &ldquo;growth trap,&rdquo; and that these are absent from prior
+growth&ndash;environment models.</p>
+
+<h2>3. Novelty assessment</h2>
+<table>
+<tr><th>Paper&rsquo;s novelty claim</th><th>Verdict</th><th>Basis (web-verified)</th></tr>
+<tr><td>Health capital affects <i>both</i> labor and TFP</td><td>Partly novel (framing)</td><td>Health-augmented growth is established (Grossman 1972; Weil 2007). The dual &theta;/&zeta; routing is a tidy combination; the fresh part is &zeta;(H) implying measured-TFP decline.</td></tr>
+<tr><td>&tau; as a production-side multiplier, not post-hoc damage</td><td>Mostly not novel</td><td>DICE net output = gross &times; (1 &minus; 0.00236&middot;T&sup2;) &mdash; damage already multiplies output.</td></tr>
+<tr><td>&Omega; amplification &ldquo;not present in Green Solow or DICE&rdquo;</td><td>Overstated / split</td><td>The exponent 1/(1&minus;&alpha;) is the generic Solow/MRW level effect; present in DICE numerically. <i>Survives only vs Green Solow</i> (which has no production-side damage multiplier).</td></tr>
+<tr><td>Thermo-GDP from consistent shadow prices</td><td>Not novel (form)</td><td>GDP &minus; D is Weitzman green-NNP / SEEA EDP / genuine savings. Adding health capital is incremental.</td></tr>
+</table>
+<p><b>Conclusion.</b> The contribution is a clean, well-integrated teaching model, a useful accounting
+dashboard, and one sharp testable hypothesis (&zeta;(H)). The &ldquo;emergent results&rdquo; claim does not
+survive: the amplification is standard Solow algebra acting on a damage multiplier DICE already employs.</p>
+
+<h2>4. Internal-consistency findings</h2>
+<p>No finding is fatal, but one (<b>G1</b>) is borderline. Independent verification confirmed our central
+critique (F1), <i>refuted</i> one of our own (F6), and weakened four others (F2&ndash;F5) to narrower, more
+defensible statements &mdash; the process corrected the critique as well as the paper.</p>
+<table>
+<tr><th>ID</th><th>Finding</th><th>Severity</th><th>Verification</th></tr>
+<tr><td><b>G1</b></td><td>&tau; = &Vert;TO&Vert;/(p&#8320;&middot;<b>Y</b>) puts output in the denominator &rArr; &Omega; is endogenous to Y; the &ldquo;closed-form&rdquo; steady state is implicit and the headline elasticity is a mislabeled <i>partial</i> derivative.</td><td class="sev-f">Serious (borderline fatal)</td><td>New &mdash; found by all 3 critic lenses</td></tr>
+<tr><td>F1</td><td>&ldquo;Amplification&rdquo; is the generic Solow / Mankiw&ndash;Romer&ndash;Weil level effect, not emergent.</td><td>Serious / framing</td><td><span class="ok">Confirmed (high)</span></td></tr>
+<tr><td>G6</td><td>The friction is mis-located: waste tracks exergy (a <i>factor</i>), so it should be factor-augmenting, not a Hicks-neutral output multiplier.</td><td>Serious</td><td>New</td></tr>
+<tr><td>G7</td><td>Thermo-GDP is not a valid welfare measure under an exogenous savings rate (Weitzman&rsquo;s theorem needs the optimal path); omits stock-investment terms.</td><td>Serious</td><td>New</td></tr>
+<tr><td>F4</td><td>Magnitude vs. rhetoric &mdash; shown <i>empirically magnitude-indeterminate</i> (&sect;6); our original &ldquo;second-order&rdquo; claim was an over-statement.</td><td>Serious</td><td>Weakened (med)</td></tr>
+<tr><td>F2</td><td>The asserted bound 0 &lt; &Omega; &le; 1 is not a theorem as written (H can exceed baseline).</td><td>Minor/Serious</td><td>Weakened (high)</td></tr>
+<tr><td>F5</td><td>The &ldquo;same convergence rate&rdquo; claim holds only with &Omega; held fixed; the coupled (k,H) system differs &mdash; but is provably <i>stable</i>.</td><td>Minor</td><td>Weakened (high)</td></tr>
+<tr><td>F6</td><td><s>Fixed-point multiplicity / tipping point.</s></td><td>&mdash;</td><td><b>Refuted (high)</b> &mdash; the health loop is self-correcting; the equilibrium is unique &amp; stable</td></tr>
+</table>
+<p class="small">Further new findings (G2&ndash;G13) include a balanced-growth-path inconsistency (&tau; &rarr; 0 on a
+BGP), the construct-identity of &tau; with the damage measure D, a convexity-axiom violation on the &psi;&lt;1
+branch, the invisibility of abatement resource costs, and the non-falsifiability of the framework as a
+mechanism distinct from ordinary development. Full detail in <code>context/stress-test.md</code>.</p>
+
+<h2>5. Citation audit</h2>
+<table>
+<tr><th>Claim in paper</th><th>Verdict</th><th>Correct value</th></tr>
+<tr><td>Social cost of N&#8322;O &asymp; \$5,400 / t (EPA 2023)</td><td class="sev-f">Inaccurate (~10&times; low)</td><td>&asymp; <b>\$54,000 / t</b> at 2% (EPA 2023, Table ES.1)</td></tr>
+<tr><td>10&ndash;23% output loss by 2100, cited to IPCC WGIII</td><td class="sev-f">Mis-attributed</td><td>Burke&ndash;Hsiang&ndash;Miguel (2015) / IPCC <b>WGII</b>; WGIII is mitigation</td></tr>
+<tr><td>SC-CO&#8322; &asymp; \$190/t; SC-CH&#8324; &asymp; \$1,600/t (EPA 2023, 2%)</td><td class="ok">Accurate</td><td>Confirmed</td></tr>
+<tr><td>DICE damages multiply gross output</td><td class="ok">Accurate (decisive for novelty)</td><td>net = gross &times; (1 &minus; 0.00236&middot;T&sup2;)</td></tr>
+<tr><td>OECD &asymp; 1% of GDP by 2060; six of nine planetary boundaries</td><td class="ok">Accurate</td><td>Confirmed</td></tr>
+</table>
+
+<h2>6. Empirical stress-test (executed)</h2>
+<p>We tested hypothesis <b>H8</b> &mdash; <i>is the &ldquo;growth trap&rdquo; real-sized, and is &tau; a slow
+exogenous state?</i> &mdash; on the real Our World in Data CO&#8322; panel (164 countries), with a two-way
+(country &times; year) fixed-effects estimator and cluster-robust standard errors implemented in pure
+<code>numpy</code>.</p>
+<p><b>Identification note (confirmed in the data).</b> The naive test dln(&tau;) ~ dln(Y) is mechanically
+&beta;<sub>emissions</sub> &minus; 1 because &tau; = CO&#8322;/GDP carries GDP on both sides &mdash; it came out
+exactly &minus;0.68 = &beta;&minus;1. The honest estimand is therefore the <i>emissions&ndash;output
+elasticity</i> &beta; from dln(CO&#8322;) ~ dln(GDP), plus the within-country intensity trend.</p>
+<table>
+<tr><th>Window / group</th><th class="n">N</th><th class="n">&beta; (emissions)</th><th class="n">mean dln(&tau;)</th><th class="n">share &tau; falling</th></tr>
+<tr><td>Full 1821+</td><td class="n">14,268</td><td class="n">0.31 (.14)</td><td class="n">+1.12%/yr</td><td class="n">51.6%</td></tr>
+<tr><td>1971+</td><td class="n">8,143</td><td class="n">0.26 (.21)</td><td class="n">&minus;0.73%/yr</td><td class="n">57.8%</td></tr>
+<tr><td>1990+</td><td class="n">5,244</td><td class="n">0.17 (.31)</td><td class="n">&minus;1.22%/yr</td><td class="n">60.9%</td></tr>
+<tr><td>2000+</td><td class="n">3,608</td><td class="n">0.54 (.08)</td><td class="n">&minus;1.32%/yr</td><td class="n">61.9%</td></tr>
+<tr><td><b>1990+ rich half</b></td><td class="n">2,621</td><td class="n">&minus;0.23 (.51)</td><td class="n"><b>&minus;2.49%/yr</b></td><td class="n"><b>70.4%</b></td></tr>
+<tr><td><b>1990+ poor half</b></td><td class="n">2,623</td><td class="n">0.55 (.11)</td><td class="n"><b>+0.04%/yr</b></td><td class="n">51.5%</td></tr>
+</table>
+<p><b>Result &mdash; an Environmental-Kuznets gradient.</b> Rich economies <i>decouple</i> (intensity falling
+&asymp; 2.5%/yr, falling in 70% of country-years); poor economies do <i>not</i> (intensity flat). For rich
+economies &tau; &rarr; 0 and &Omega; &rarr; 1, so <i>the trap dissolves along the balanced growth path</i> &mdash;
+contradicting the paper&rsquo;s premise that &tau; is a slow exogenous state, and undercutting the
+secular-stagnation framing. For poor economies &tau; is persistent, so the trap premise holds <i>exactly where
+the paper posited an environmental poverty trap</i> &mdash; genuine support for one of its two headline
+hypotheses.</p>
+<p><b>Calibration (leg a).</b> The implied steady-state output gap 1 &minus; (&Omega;*)<sup>1/(1&minus;&alpha;)</sup>
+(waste drag, &alpha;=0.3) ranges from 2.8% (&tau;=0.02, &psi;=1) to 40&ndash;78% (&tau;=0.30); the health-drag
+channel alone reaches 16&ndash;41% at a realistic HALE deficit (58 vs 74 years). The magnitude is therefore
+<i>indeterminate</i> &mdash; it pivots entirely on the unidentified normalization price p&#8320; (which sets
+&tau;), the uncalibrated convexity &psi;, and the health elasticity. This corrected our own earlier
+&ldquo;second-order&rdquo; claim (F4).</p>
+<p class="small"><b>Limitations.</b> &tau; here is CO&#8322;/GDP only (territorial; consumption-based emissions
+would weaken rich-country decoupling via offshoring); the estimates are reduced-form, not causal (no
+instrument for output growth); the anchor regression on TFP and the decisive micro cognitive-gradient tests
+(H7/H2) remain to be run on microdata.</p>
+
+<h2>7. Verdict and recommendations</h2>
+<p>The paper is best read as a <b>clean synthesis plus one sharp testable hypothesis</b> (&zeta;(H)), not the
+structural novelty it advertises, and <b>not</b> a universal &ldquo;thermodynamic growth trap.&rdquo; The
+evidence-grounded reading is <i>conditional</i>: a real but parameter-sensitive drag that matters most for
+non-decoupling developing economies. Recommended revisions: (i) re-derive the steady state as a fixed point,
+acknowledging &Omega;(Y) endogeneity (G1); (ii) relocate the novelty claim from <i>that</i> &Omega; amplifies to
+<i>what</i> &Omega; is, and concede DICE&rsquo;s prior multiplicative damage structure; (iii) restrict
+Thermo-GDP&rsquo;s welfare interpretation to an optimizing (Ramsey) version (G7); (iv) correct the SC-N&#8322;O
+and IPCC citations; (v) lead the empirical program with the &zeta;(H) cognitive-gradient design, the only test
+that discriminates the mechanism from ordinary development.</p>
+
+<div class="pagebreak"></div>
+<h2>Appendix A. The agent system</h2>
+<pre>
+User
+ |
+ v
+Main loop (orchestrator: read PDF, write context/, run analysis, synthesize)
+ |
+ +-- WORKFLOW 1 . Verification ........................... 16 agents, 540k tok
+ |     +-- 7 refutation agents ...... each DEFENDS the paper vs one finding  -> F1 confirmed, F6 refuted
+ |     +-- 6 citation checkers ...... web-verify SC-N2O, IPCC, DICE, MRW, OECD, EPA
+ |     +-- 3 completeness critics ... dynamics / econometrics / theory       -> found flagship G1
+ |
+ +-- WORKFLOW 2 . Hypothesis-test system ................. 19 agents, 968k tok
+ |     +-- 8 formalizers ............ one falsifiable spec per hypothesis (H1-H8)
+ |     +-- 4 IDEA-SHARING PANEL ..... read ALL drafts, cross-critique   <== the "Teams" collaboration
+ |     |        ident-skeptic | data-engineer | power-analyst | discrimination-designer
+ |     +-- 6 data-acquisition ....... PWT, OWID, World Bank PM2.5, WHO HALE, WDI, EPA SCC  (verified)
+ |     +-- 1 assembler .............. starter table + runnable R/Python
+ |
+ +-- EMPIRICAL EXECUTION (this context) ... pure-numpy two-way FE on real OWID data
+       -> EKC decoupling gradient + Omega-gap calibration
+
+Teams layer:  local in-workflow panels (USED) + teammateMode   |   claude.ai Remote Control (user-gated, outward-facing)
+</pre>
+
+<h2>Appendix B. Data sources (verified access)</h2>
+<table>
+<tr><th>Construct</th><th>Source &amp; code</th><th>Coverage</th></tr>
+<tr><td>TFP, real GDP, human capital</td><td>Penn World Table 10.01 (<code>rtfpna</code>, <code>rgdpna</code>, <code>hc</code>)</td><td>183 countries, 1950&ndash;2019</td></tr>
+<tr><td>Waste intensity &tau; (CO&#8322;/GDP)</td><td>Our World in Data <code>co2-intensity</code>; WB <code>EN.GHG.CO2.RT.GDP.PP.KD</code></td><td>~200 countries, to 2022</td></tr>
+<tr><td>PM&#8322;.&#8325; exposure</td><td>World Bank <code>EN.ATM.PM25.MC.M3</code> (van&nbsp;Donkelaar/IHME)</td><td>~190 countries, 1990&ndash;2020</td></tr>
+<tr><td>Health capital H (HALE)</td><td>WHO GHO <code>WHOSIS_000002</code></td><td>~190 states, 2000&ndash;2021</td></tr>
+<tr><td>Macro controls</td><td>WB WDI <code>NY.GDP.PCAP.KD</code>, <code>NY.GNS.ICTR.ZS</code>, <code>SP.POP.GROW</code></td><td>~217 countries</td></tr>
+<tr><td>Shadow prices (D)</td><td>EPA 2023 SC-GHG; Rennert et&nbsp;al. 2022; UNEP-IRP material footprint</td><td>global schedule</td></tr>
+</table>
+
+<h2>References</h2>
+<div class="refs">
+<p>Ayres, R.U. &amp; Warr, B. (2009). <i>The Economic Growth Engine</i>. Edward Elgar.</p>
+<p>Barrage, L. &amp; Nordhaus, W.D. (2024). Policies, projections, and the social cost of carbon: DICE-2023R. <i>PNAS</i> 121(13).</p>
+<p>Brock, W.A. &amp; Taylor, M.S. (2010). The Green Solow model. <i>Journal of Economic Growth</i> 15(2), 127&ndash;153.</p>
+<p>Burke, M., Hsiang, S.M. &amp; Miguel, E. (2015). Global non-linear effect of temperature on economic production. <i>Nature</i> 527, 235&ndash;239.</p>
+<p>Chang, T., Graff Zivin, J., Gross, T. &amp; Neidell, M. (2019). The effect of pollution on worker productivity. <i>AEJ: Applied</i> 11(1).</p>
+<p>Dechezlepr&ecirc;tre, A., Rivers, N., Stadler, B. &amp; Yonezawa, H. (2025). The impact of air pollution on labour productivity. <i>OECD STI Policy Papers</i>.</p>
+<p>EPA (2023). <i>Report on the Social Cost of Greenhouse Gases</i> (final, Dec 2023), Table ES.1.</p>
+<p>Feenstra, R.C., Inklaar, R. &amp; Timmer, M.P. (2015). The next generation of the Penn World Table. <i>AER</i> 105(10).</p>
+<p>Greenlee, S. (2026). <i>Thermodynamic Waste, Health Capital, and Long-Run Growth</i> (working paper, the document under analysis).</p>
+<p>Grossman, G.M. &amp; Krueger, A.B. (1995). Economic growth and the environment. <i>QJE</i> 110(2).</p>
+<p>K&uuml;nn, S., Palacios, J. &amp; Pestel, N. (2023). Indoor air quality and cognitive performance. <i>(chess panel).</i></p>
+<p>Mankiw, N.G., Romer, D. &amp; Weil, D.N. (1992). A contribution to the empirics of economic growth. <i>QJE</i> 107(2).</p>
+<p>Nordhaus, W.D. (2017). Revisiting the social cost of carbon. <i>PNAS</i> 114(7).</p>
+<p>Rennert, K., et&nbsp;al. (2022). Comprehensive evidence implies a higher social cost of CO&#8322;. <i>Nature</i> 610, 687&ndash;692.</p>
+<p>Richardson, K., et&nbsp;al. (2023). Earth beyond six of nine planetary boundaries. <i>Science Advances</i> 9(37).</p>
+<p>Solow, R.M. (1956). A contribution to the theory of economic growth. <i>QJE</i> 70(1).</p>
+<p>Weil, D.N. (2007). Accounting for the effect of health on economic growth. <i>QJE</i> 122(3).</p>
+</div>
+
+<hr>
+<p class="small">Prepared with Claude Code (Anthropic) via multi-agent orchestration. This is an adversarial
+analysis: it is designed to surface weaknesses, and it reports evidence supporting the paper as faithfully as
+evidence undercutting it. Findings cite specific equations/sections of the source paper; empirical results use
+real public data and are reproducible via <code>context/analysis/decoupling_h8.py</code>.</p>
+
+</body>
+</html>
