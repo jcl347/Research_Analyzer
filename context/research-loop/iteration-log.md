@@ -54,7 +54,13 @@ productivity/TFP literature and escapes the EKC null (longitudinal within-cohort
 
 Further **macro** iteration cannot confirm the mechanism (it is micro by construction), so the loop
 **stopped** at the point where the novel question is sharply stated, stress-test-survived for
-novelty, and gated on a pre-registered cohort experiment that public macro data cannot run. The
-two broader idea-generation runs (`wu74myokc` hill-climb, `wdk8efee0` team) were still executing at
-write-time; their proposals will be appended to a `novel-approaches.md` if they add beyond the
-stock-vs-flow residual.
+novelty, and gated on a pre-registered cohort experiment that public macro data cannot run.
+
+> **Note on the two broader idea-generation runs.** Two longer runs (`wu74myokc` hill-climb,
+> `wdk8efee0` team-mode) were launched to widen the search but **hung in their long sequential
+> web-search chains and were orphaned with zero output** (0-byte result files; not recoverable).
+> They contributed nothing, and the converged result above does **not** depend on them — it rests
+> on the four executed data probes and the focused red-team (`wf_46fb5555`). The decisive lesson:
+> **deep sequential web-enabled agent chains are fragile**; the reliable pattern here was
+> *short fan-out workflows + main-loop data execution*. The stock-vs-flow mutation stands as the
+> final converged output.
