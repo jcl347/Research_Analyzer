@@ -161,6 +161,48 @@ novelty it claims, and **not** a universal "growth trap." The honest, evidence-g
 a **real but parameter-sensitive drag that matters most for non-decoupling developing economies**.
 No fatal errors; G1 is borderline and the closed-form results need re-derivation as a fixed point.
 
+## 5b. Iterative auto-research (Karpathy-style loop) → a novel mutation
+
+We then ran an **iterative auto-research loop** ([context/research-loop/](context/research-loop/)),
+modeled on Karpathy's *autoresearch* (mutate one artifact → run → measure one metric →
+keep/discard → repeat), to evolve a *novel* mutation of Stu's ideas and **test it against fresh
+data**. Four macro probes were executed on real public data (OWID, World Bank), then a **team
+red-team stress-tested our own converged idea** — and **killed it**, which is the loop working.
+
+**Executed data probes (faithful, incl. nulls):**
+
+| Probe | Test | Result |
+|-------|------|--------|
+| A | does waste intensity τ fall as income rises? | **EKC gradient** — rich decouple (−2.5%/yr), poor don't (flat) |
+| B | regime-conditional pollution → labor productivity | **null** (t=0.87, wrong sign) |
+| C | Thermo-GDP damage deficit → future 5-yr growth | **null** (t=−0.19) |
+| D | PM₂.₅ × service-share → productivity | **null** (t=1.0, wrong sign) |
+
+Four independent designs: **one EKC confirmation, three nulls**, textbook convergence throughout.
+**High-confidence negative result: the thermo-ecological framework has no macro footprint
+distinguishable from ordinary development** — so the headline "thermodynamic growth trap" is *not
+identified* in the data and reduces to the generic Solow level effect.
+
+**The red-team killed our first "novel" idea** (a "cognitive-masking" reading of the nulls): it
+was **affirming the consequent** (nulls can't separate "masked" from "absent") and **not novel**
+(every pillar is published — Chang/Graff Zivin/Neidell; Ebenstein 2018; the Künn–Palacios–Pestel
+2023 chess test; De Ridder's *Emissions-Adjusted TFP* 2025). That demotion is recorded honestly.
+
+**The mutation that survives** ([novel-hypothesis.md](context/research-loop/novel-hypothesis.md)):
+
+> **"Cognitive capital is a *stock*, but the entire evidence base is a *flow*."** Stu's ζ(H) makes
+> health/cognition a **stock that depreciates** (the source of his growth mechanism), yet *every*
+> causal estimate measures a **transient, reversible flow** (impairment that recovers when the air
+> clears). No one has separated **chronic cognitive-capital depreciation** from the **acute flow**
+> in the productivity/TFP setting. Either there is a stock effect (Stu's mechanism gets its missing
+> foundation) **or the effect is entirely flow — which falsifies his stock-based growth model.**
+> The decisive test is a pre-registered **chronic-exposure cohort** design (currently unrun).
+
+**Honest status:** the *negative result* is high-confidence and tested; the *stock-vs-flow*
+mutation is genuinely novel and EKC-proof but the **mechanism is untested** (needs cohort
+microdata the public macro panels can't reach). This is a **negative-result-plus-novel-hypothesis
+note**, not a claimed positive discovery — validated as such by the team red-team.
+
 ## 6. Repository map
 
 | Path | What |
@@ -174,6 +216,7 @@ No fatal errors; G1 is borderline and the closed-form results need re-derivation
 | [`context/data-sources.md`](context/data-sources.md) | Verified data inventory + starter dataset |
 | [`context/results.md`](context/results.md) | **Executed** empirical results |
 | [`context/analysis/`](context/analysis/) | Runnable code (`decoupling_h8.py` executed; `anchor_regression.{R,py}`) |
+| [`context/research-loop/`](context/research-loop/) | The Karpathy-style auto-research loop: framework, 4 executed data probes, iteration log, and the converged (stress-test-survived) novel mutation |
 
 ## 7. Reproduce the empirical test
 
